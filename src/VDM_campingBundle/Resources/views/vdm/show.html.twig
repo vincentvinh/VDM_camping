@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vdm</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ vdm.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ vdm.titre }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ vdm.text }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if vdm.date %}{{ vdm.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ vdm.genre }}</td>
+            </tr>
+            <tr>
+                <th>Auteur</th>
+                <td>{{ vdm.auteur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('vdm_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

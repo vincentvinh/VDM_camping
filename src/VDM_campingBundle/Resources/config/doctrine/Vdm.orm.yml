@@ -1,0 +1,25 @@
+VDM_campingBundle\Entity\Vdm:
+    type: entity
+    table: null
+    repositoryClass: VDM_campingBundle\Repository\VdmRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        text:
+            type: text
+        date:
+            type: datetime
+        genre:
+            type: string
+            length: 255
+        auteur:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

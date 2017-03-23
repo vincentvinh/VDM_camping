@@ -1,0 +1,4 @@
+services:
+#    vdm.camping.example:
+#        class: VDM_campingBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vdm</h1>
+
+    <div class="block">
+        <h3>{{ vdm.titre }}</h3>
+        <div class="text">
+            <p>{{ vdm.text }}</p>
+        </div>
+        <div class="date">
+            <p>Date de création : {{ vdm.date|date('Y-m-d H:i:s') }}</p>
+        </div>
+        <div class="genre">
+            <p> Catégorie : {{ vdm.genre }} <br>
+                Auteur : {{ vdm.auteur }}</p>
+        </div>
+        <div class="boutton">
+            <a href="{{ path('vdm_show', { 'id': vdm.id }) }}">Voir plus</a>
+        </div>
+        <div class="boutton_2">
+            <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edition</a>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <a href="{{ path('vdm_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

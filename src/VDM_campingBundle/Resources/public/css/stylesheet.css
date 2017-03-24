@@ -4,6 +4,7 @@ body
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    padding: 20px;
 }
 
 .block, h1
@@ -15,7 +16,7 @@ body
     border-bottom:7px solid green;
     padding: 10px;
     text-align: center;
-    margin: 20px;
+    margin: 40px;
 }
 
 .block

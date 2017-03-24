@@ -1,47 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Vdms list</h1>
+    <h1>!! Vie De Merde Au Camping !!</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Text</th>
-                <th>Date</th>
-                <th>Genre</th>
-                <th>Auteur</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for vdm in vdms %}
-            <tr>
-                <td><a href="{{ path('vdm_show', { 'id': vdm.id }) }}">{{ vdm.id }}</a></td>
-                <td>{{ vdm.titre }}</td>
-                <td>{{ vdm.text }}</td>
-                <td>{% if vdm.date %}{{ vdm.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ vdm.genre }}</td>
-                <td>{{ vdm.auteur }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('vdm_show', { 'id': vdm.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            <div class="block">
+                <h3>{{ vdm.titre }}</h3>
+                <div class="text">
+                    <p>{{ vdm.text }}</p>
+                </div>
+                <div class="date">
+                    <p>Date de création : {{ vdm.date|date('Y-m-d H:i:s') }}</p>
+                </div>
+                <div class="genre">
+                    <p> Catégorie : {{ vdm.genre }} <br>
+                        Auteur : {{ vdm.auteur }}</p>
+                </div>
+                <div class="boutton">
+                    <a href="{{ path('vdm_show', { 'id': vdm.id }) }}">Voir plus</a>
+                </div>
+                <div class="boutton_2">
+                    <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edition</a>
+                </div>
+            </div>
         {% endfor %}
-        </tbody>
-    </table>
+    <div class="create">
+        <a href="{{ path('vdm_new') }}">Créer une nouvelle VDM</a>
+    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('vdm_new') }}">Create a new vdm</a>
-        </li>
-    </ul>
 {% endblock %}

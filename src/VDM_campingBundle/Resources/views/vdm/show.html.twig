@@ -3,34 +3,25 @@
 {% block body %}
     <h1>Vdm</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ vdm.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ vdm.titre }}</td>
-            </tr>
-            <tr>
-                <th>Text</th>
-                <td>{{ vdm.text }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{% if vdm.date %}{{ vdm.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Genre</th>
-                <td>{{ vdm.genre }}</td>
-            </tr>
-            <tr>
-                <th>Auteur</th>
-                <td>{{ vdm.auteur }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="block">
+        <h3>{{ vdm.titre }}</h3>
+        <div class="text">
+            <p>{{ vdm.text }}</p>
+        </div>
+        <div class="date">
+            <p>Date de création : {{ vdm.date|date('Y-m-d H:i:s') }}</p>
+        </div>
+        <div class="genre">
+            <p> Catégorie : {{ vdm.genre }} <br>
+                Auteur : {{ vdm.auteur }}</p>
+        </div>
+        <div class="boutton">
+            <a href="{{ path('vdm_show', { 'id': vdm.id }) }}">Voir plus</a>
+        </div>
+        <div class="boutton_2">
+            <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edition</a>
+        </div>
+    </div>
 
     <ul>
         <li>

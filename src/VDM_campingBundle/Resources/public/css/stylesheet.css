@@ -1,5 +1,114 @@
 body
 {
-    background-color: #0000F0;
+    background-image: url(../img/fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
+.block, h1
+{
+    background-color: black;
+    opacity: 0.8;
+    color: black;
+    border-top:7px solid green;
+    border-bottom:7px solid green;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.block
+{
+    height:260px;
+    margin-top:75px;
+}
+
+h1
+{
+    color: white;
+}
+
+h3
+{
+    position: absolute;
+    left:4.4%;
+    background-color: #afff69;
+    opacity:0.7;
+    width:1000px;
+    height: 30px;
+    border-radius: 20px;
+    font-size:30px;
+}
+
+.text
+{
+    position: relative;
+    left:2.5%;
+    top:75px;
+    background-color: #afff69;
+    opacity:0.7;
+    width:1500px;
+    height: 150px;
+    border-radius: 20px;
+    padding:10px;
+}
+
+.date
+{
+    position: relative;
+    top:-157px;
+    left:1100px;
+    background-color: #afff69;
+    opacity:0.7;
+    width:200px;
+    border-radius: 20px;
+}
+
+.genre
+{
+    position: relative;
+    top:-210px;
+    left:1325px;
+    background-color: #afff69;
+    opacity:0.7;
+    width:200px;
+    border-radius: 20px;
+}
+
+.boutton
+{
+    position: relative;
+    top:-210px;
+    left:1575px;
+    background-color: #afff69;
+    opacity:0.7;
+    width:100px;
+    height:25px;
+    border-radius: 20px;
+}
+
+.boutton_2
+{
+    position: relative;
+    top:-200px;
+    left:1575px;
+    background-color: #afff69;
+    opacity:0.7;
+    width:100px;
+    height:25px;
+    border-radius: 20px;
+}
+
+.create
+{
+    position: absolute;
+    top:105px;
+    left:43%;
+    background-color: #afff69;
+    opacity:0.7;
+    width:300px;
+    border-radius: 20px;
+    padding:10px;
+    font-size:23px;
 }

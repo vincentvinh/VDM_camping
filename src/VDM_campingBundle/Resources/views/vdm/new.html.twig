@@ -3,40 +3,40 @@
 {% block body %}
    <div class="container container_nw">
 
-       <h1>Vdm creation</h1>
+       <h1>!! Création de Vie De Merde !!</h1>
 
 
   <div class="well"> {{ form_start(form) }}
-    <div class="form-group col-xs-12">
+    <div class="titre2">
           {{ form_label(form.titre) }}
           {{ form_errors(form.titre) }}
           {{ form_widget(form.titre) }}
       </div>
 
-      <div class="form-group col-xs-12">
+      <div class="text2">
           {{ form_label(form.text) }}
           {{ form_errors(form.text) }}
           {{ form_widget(form.text) }}
       </div>
-      <div class="form-group col-xs-12">
+      <div class="genre2">
           {{ form_label(form.genre) }}
           {{ form_errors(form.genre) }}
           {{ form_widget(form.genre) }}
       </div>
-      <div class="form-group col-xs-12">
+      <div class="auteur2">
           {{ form_label(form.auteur) }}
           {{ form_errors(form.auteur) }}
           {{ form_widget(form.auteur) }}
       </div>
-      <div class="form-group col-xs-12">
+      <div class="date2">
           {{ form_label(form.date) }}
           {{ form_errors(form.date) }}
           {{ form_widget(form.date) }}
       </div>
-      <div class="form-group ">
+      <div class="">
           {{ form_widget(form) }}
 
-          <input type="submit" value="Create" />
+          <input type="submit" class="submit submit2" value="Create" />
           <ul>
               <li>
                   <a href="{{ path('vdm_index') }}">Back to the list</a>

@@ -33,7 +33,7 @@ h1
 h3
 {
     position: absolute;
-    left:4.4%;
+    left:6.3%;
     background-color: #afff69;
     opacity:0.7;
     width:1000px;
@@ -104,7 +104,7 @@ h3
 .create
 {
     position: absolute;
-    top:105px;
+    top:150px;
     left:43%;
     background-color: #afff69;
     opacity:0.7;
@@ -112,4 +112,66 @@ h3
     border-radius: 20px;
     padding:10px;
     font-size:23px;
+}
+
+.b1, .b2
+{
+    background-color: #afff69;
+    opacity:0.7;
+    border-radius: 20px;
+}
+
+.b1
+{
+    position: absolute;
+    top:358px;
+    left:1650px;
+    height:25px;
+    width:130px;
+}
+
+.b2
+{
+    position: absolute;
+    top:390px;
+    left:1650px;
+    height:25px;
+    width:130px;
+}
+
+.b3
+{
+    position: absolute;
+    top:427px;
+    left:1650px;
+    height:25px;
+    width:130px;
+}
+
+.submit
+{
+    background-color: #afff69;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    border-radius:20px;
+}
+
+.well
+{
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    border-top:7px solid green;
+    border-bottom:7px solid green;
+    padding: 10px;
+    text-align: center;
+    margin: 40px;
+    width:500px;
+    position: absolute;
+    left:33.5%;
+}
+
+.titre2, .text2, .genre2, .auteur2, .date2
+{
+    padding-top:20px;
 }

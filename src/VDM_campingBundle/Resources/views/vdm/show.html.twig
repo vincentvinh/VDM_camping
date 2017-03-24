@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Vdm</h1>
+    <h1>!! Vie De Merde plus en détail !!</h1>
 
     <div class="block">
         <h3>{{ vdm.titre }}</h3>
@@ -15,25 +15,17 @@
             <p> Catégorie : {{ vdm.genre }} <br>
                 Auteur : {{ vdm.auteur }}</p>
         </div>
-        <div class="boutton">
-            <a href="{{ path('vdm_show', { 'id': vdm.id }) }}">Voir plus</a>
-        </div>
         <div class="boutton_2">
             <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edition</a>
         </div>
+        <div class="b1">
+            <a href="{{ path('vdm_index') }}">Retour a la liste</a>
+        </div>
+        <div class="b3">
+                {{ form_start(delete_form) }}
+                    <input type="submit" class="submit" value="Delete">
+                {{ form_end(delete_form) }}
+        </div>
     </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('vdm_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('vdm_edit', { 'id': vdm.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 {% endblock %}

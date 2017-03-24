@@ -5,3 +5,7 @@ vdm.camping_vdm:
 vdm.camping_homepage:
     path:     /
     defaults: { _controller: VDM_campingBundle:Default:index }
+
+sg_datatables_bundle:
+    resource: "@SgDatatablesBundle/Controller/"
+    type:     annotation

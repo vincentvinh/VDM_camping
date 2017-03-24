@@ -18,11 +18,10 @@ VDM_campingBundle\Entity\Vdm:
             type: datetime
         genre:
             type: string
-            length: 255
+        
         auteur:
             type: string
             length: 255
+
     lifecycleCallbacks: {  }
-
-
 

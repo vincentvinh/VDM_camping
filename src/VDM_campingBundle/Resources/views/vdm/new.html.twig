@@ -1,16 +1,51 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Vdm creation</h1>
+   <div class="container container_nw">
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+       <h1>Vdm creation</h1>
+
+
+  <div class="well"> {{ form_start(form) }}
+    <div class="form-group col-xs-12">
+          {{ form_label(form.titre) }}
+          {{ form_errors(form.titre) }}
+          {{ form_widget(form.titre) }}
+      </div>
+
+      <div class="form-group col-xs-12">
+          {{ form_label(form.text) }}
+          {{ form_errors(form.text) }}
+          {{ form_widget(form.text) }}
+      </div>
+      <div class="form-group col-xs-12">
+          {{ form_label(form.genre) }}
+          {{ form_errors(form.genre) }}
+          {{ form_widget(form.genre) }}
+      </div>
+      <div class="form-group col-xs-12">
+          {{ form_label(form.auteur) }}
+          {{ form_errors(form.auteur) }}
+          {{ form_widget(form.auteur) }}
+      </div>
+      <div class="form-group col-xs-12">
+          {{ form_label(form.date) }}
+          {{ form_errors(form.date) }}
+          {{ form_widget(form.date) }}
+      </div>
+      <div class="form-group ">
+          {{ form_widget(form) }}
+
+          <input type="submit" value="Create" />
+          <ul>
+              <li>
+                  <a href="{{ path('vdm_index') }}">Back to the list</a>
+              </li>
+          </ul>
+      </div>
+
     {{ form_end(form) }}
+  </div>
+   </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('vdm_index') }}">Back to the list</a>
-        </li>
-    </ul>
 {% endblock %}

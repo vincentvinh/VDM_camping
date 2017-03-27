@@ -51,5 +51,50 @@ class Genre
     {
         return $this->genre;
     }
-}
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $vdm;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->vdm = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add vdm
+     *
+     * @param \VDM_campingBundle\Entity\Vdm $vdm
+     *
+     * @return Genre
+     */
+    public function addVdm(\VDM_campingBundle\Entity\Vdm $vdm)
+    {
+        $this->vdm[] = $vdm;
+
+        return $this;
+    }
+
+    /**
+     * Remove vdm
+     *
+     * @param \VDM_campingBundle\Entity\Vdm $vdm
+     */
+    public function removeVdm(\VDM_campingBundle\Entity\Vdm $vdm)
+    {
+        $this->vdm->removeElement($vdm);
+    }
+
+    /**
+     * Get vdm
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getVdm()
+    {
+        return $this->vdm;
+    }
+}

@@ -16,13 +16,13 @@ VDM_campingBundle\Entity\Vdm:
             type: text
         date:
             type: datetime
-        genre:
-            type: string
-            length: 255
         auteur:
             type: string
             length: 255
+    manyToOne:
+        genre:
+            targetEntity: VDM_campingBundle\Entity\Genre
+            joinColumn:
+                name: genre_id
+                referencedColumnNamed: id
     lifecycleCallbacks: {  }
-
-
-

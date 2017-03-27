@@ -2,10 +2,13 @@ vdm.camping_vdm:
     resource: "@VDM_campingBundle/Resources/config/routing/vdm.yml"
     prefix:   /vdm
 
+vdm.camping_genre:
+    resource: "@VDM_campingBundle/Resources/config/routing/genre.yml"
+    prefix:   /genre
+
 vdm.camping_homepage:
     path:     /
     defaults: { _controller: VDM_campingBundle:Default:index }
 
-sg_datatables_bundle:
-    resource: "@SgDatatablesBundle/Controller/"
-    type:     annotation
+
+

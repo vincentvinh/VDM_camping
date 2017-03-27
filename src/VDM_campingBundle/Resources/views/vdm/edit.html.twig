@@ -1,21 +1,52 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>Vdm edit</h1>
+    {% block body %}
+    <div class="container container_nw">
+        <h1>Vdm edit</h1>
 
-    {{ form_start(edit_form) }}
+     <div class="well" >  {{ form_start(edit_form) }}
+    <div class="form-group col-xs-12">
+        {{ form_label(edit_form.titre) }}
+        {{ form_errors(edit_form.titre) }}
+        {{ form_widget(edit_form.titre) }}
+    </div>
+
+    <div class="form-group col-xs-12">
+        {{ form_label(edit_form.text) }}
+        {{ form_errors(edit_form.text) }}
+        {{ form_widget(edit_form.text) }}
+    </div>
+    <div class="form-group col-xs-12">
+        {{ form_label(edit_form.genre) }}
+        {{ form_errors(edit_form.genre) }}
+        {{ form_widget(edit_form.genre) }}
+    </div>
+    <div class="form-group col-xs-12">
+        {{ form_label(edit_form.auteur) }}
+        {{ form_errors(edit_form.auteur) }}
+        {{ form_widget(edit_form.auteur) }}
+    </div>
+    <div class="form-group col-xs-12">
+        {{ form_label(edit_form.date) }}
+        {{ form_errors(edit_form.date) }}
+        {{ form_widget(edit_form.date) }}
+    </div>
+    <div class="form-group ">
+    </div>
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+            <input type="submit" value="Edit" />
+        {{ form_end(edit_form) }}
+     </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('vdm_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-{% endblock %}
+        <ul>
+            <li>
+                <a href="{{ path('vdm_index') }}">Back to the list</a>
+            </li>
+            <li>
+                {{ form_start(delete_form) }}
+                    <input type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
+        </ul>
+    </div>
+    {% endblock %}

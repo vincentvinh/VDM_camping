@@ -12,4 +12,8 @@ VDM_campingBundle\Entity\Genre:
         genre:
             type: string
             length: 255
+    oneToMany:
+        vdm:
+            targetEntity: VDM_campingBundle\Entity\Vdm
+            mappedBy: genre
     lifecycleCallbacks: {  }
